@@ -1,0 +1,114 @@
+/* Partner Badge Section Styles */
+.partner-badge-section {
+    position: relative;
+    width: 100%;
+    background: #121212;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: -52px; /* Attach to hero section */
+    animation: fadeInDown 0.8s ease-out;
+    animation-delay: 1.6s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    z-index: 10; /* Ensure it stays above hero background */
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.partner-badge-section .container {
+    max-width: 1920px;
+}
+
+/* Partner Logo Animation */
+.partner-logo {
+    transition: all 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+
+.partner-logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1) invert(0);
+}
+
+/* Text Animation */
+.partner-badge-section span {
+    position: relative;
+    display: inline-block;
+}
+
+.partner-badge-section span::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: #FF3621;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.partner-badge-section:hover span::after {
+    width: 100%;
+}
+
+/* Shine Effect */
+.partner-badge-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.1), 
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.partner-badge-section:hover::before {
+    left: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .partner-badge-section {
+        height: auto;
+        margin-top: -40px; /* Adjust for mobile */
+    }
+    
+    .partner-badge-section .flex {
+        flex-direction: column;
+        padding: 12px 0;
+        gap: 8px;
+    }
+    
+    .partner-badge-section span {
+        font-size: 16px;
+    }
+    
+    .partner-logo {
+        height: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .partner-badge-section {
+        margin-top: -30px; /* Adjust for smaller screens */
+    }
+    
+    .partner-badge-section span {
+        font-size: 14px;
+        text-align: center;
+    }
+}

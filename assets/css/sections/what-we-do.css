@@ -1,0 +1,329 @@
+/* What We Do Section Styles */
+.what-we-do-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+}
+
+/* Container Custom */
+.what-we-do-section .container-custom {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-left: 51px;
+    padding-right: 51px;
+}
+
+/* Animated Background Pulse */
+@keyframes pulse-delayed {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+}
+
+.animate-pulse-delayed {
+    animation: pulse-delayed 4s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Slide Up Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease-out 0.2s;
+    animation-fill-mode: backwards;
+}
+
+.animate-slide-up-delayed {
+    animation: slideUp 0.8s ease-out 0.4s;
+    animation-fill-mode: backwards;
+}
+
+/* Service Card Styles */
+.service-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: slideUp 0.8s ease-out;
+    animation-fill-mode: backwards;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 1s;
+}
+
+/* Card Content */
+.card-content {
+    flex: 1;
+}
+
+/* Card Hover Effect */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #FF3621 0%, #ff6b5a 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+.service-card:hover::before {
+    opacity: 0.03;
+}
+
+/* Card Shadow on Hover */
+.service-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(255, 54, 33, 0.25);
+    border-color: #FF3621;
+}
+
+/* Icon Wrapper Styles */
+.icon-wrapper {
+    position: relative;
+    background: #FF3621;
+    box-shadow: 0 10px 30px rgba(255, 54, 33, 0.3);
+}
+
+.icon-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid #FF3621;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.service-card:hover .icon-wrapper::after {
+    opacity: 0.3;
+    inset: -8px;
+}
+
+/* Icon Animation on Hover */
+.service-card:hover .icon-wrapper svg {
+    animation: iconBounce 0.6s ease;
+}
+
+@keyframes iconBounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* Card Content Animation */
+.service-card h3,
+.service-card p {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover h3 {
+    transform: translateX(5px);
+}
+
+/* Ensure paragraph is visible */
+.service-card p {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Ripple Effect on Click */
+.service-card {
+    overflow: hidden;
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 54, 33, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+    z-index: 0;
+}
+
+.service-card:active::after {
+    width: 400px;
+    height: 400px;
+}
+
+/* Ensure content is above the ripple effect */
+.service-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 1536px) {
+    .what-we-do-section .container-custom {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .what-we-do-section .container-custom {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    
+    .what-we-do-section h2 {
+        font-size: 64px;
+        line-height: 70px;
+    }
+    
+    .what-we-do-section p {
+        font-size: 26px;
+        line-height: 39px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .what-we-do-section {
+        min-height: auto;
+        padding: 60px 0;
+    }
+    
+    .what-we-do-section .container-custom {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    
+    .what-we-do-section h2 {
+        font-size: 52px;
+        line-height: 58px;
+    }
+    
+    .what-we-do-section p {
+        font-size: 22px;
+        line-height: 33px;
+    }
+    
+    .service-card {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .what-we-do-section .container-custom {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .what-we-do-section h2 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    
+    .what-we-do-section p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    
+    .icon-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .icon-wrapper svg {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .service-card h3 {
+        font-size: 22px;
+    }
+    
+    .service-card p {
+        font-size: 18px;
+        line-height: 27px;
+    }
+}
+
+@media (max-width: 640px) {
+    .what-we-do-section {
+        padding: 40px 0;
+    }
+    
+    .what-we-do-section .container-custom {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .what-we-do-section h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+    .what-we-do-section p {
+        font-size: 18px;
+        line-height: 27px;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .what-we-do-section {
+        page-break-inside: avoid;
+    }
+}

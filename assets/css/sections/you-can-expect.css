@@ -1,0 +1,313 @@
+
+        /* Outcomes Section Styles */
+        .outcomes-section {
+            position: relative;
+            min-height: 100vh;
+            background: #121212;
+            font-family: 'Instrument Sans', sans-serif;
+        }
+
+        .text-brand-red {
+            color: #FF3621;
+        }
+
+        .bg-brand-red {
+            background-color: #FF3621;
+        }
+
+        /* Container Custom */
+        .outcomes-section .container-custom {
+            width: 100%;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding-left: 51px;
+            padding-right: 51px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out 0.2s;
+            animation-fill-mode: backwards;
+        }
+
+        .animate-slide-up-delayed {
+            animation: slideUp 0.8s ease-out 0.4s;
+            animation-fill-mode: backwards;
+        }
+
+        /* Outcome Card Styles */
+        .outcome-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 2.5rem;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: slideUp 0.8s ease-out;
+            animation-fill-mode: backwards;
+            min-height: 320px;
+        }
+
+        .outcome-card:nth-child(1) {
+            animation-delay: 0.6s;
+        }
+
+        .outcome-card:nth-child(2) {
+            animation-delay: 0.7s;
+        }
+
+        .outcome-card:nth-child(3) {
+            animation-delay: 0.8s;
+        }
+
+        .outcome-card:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+
+        .outcome-card:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        .outcome-card:nth-child(6) {
+            animation-delay: 1.1s;
+        }
+
+        /* Card Hover Effects */
+        .outcome-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 25px;
+            background: linear-gradient(135deg, rgba(255, 54, 33, 0.1) 0%, rgba(255, 107, 90, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: -1;
+        }
+
+        .outcome-card:hover::before {
+            opacity: 1;
+        }
+
+        .outcome-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(255, 54, 33, 0.3);
+            border-color: rgba(255, 54, 33, 0.5);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Icon Wrapper Styles */
+        .icon-wrapper {
+            position: relative;
+            background: #FF3621;
+            box-shadow: 0 10px 30px rgba(255, 54, 33, 0.5);
+        }
+
+        .icon-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            border: 2px solid #FF3621;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .outcome-card:hover .icon-wrapper::after {
+            opacity: 0.5;
+            inset: -8px;
+        }
+
+        /* Icon Animation */
+        .outcome-card:hover .icon-wrapper svg {
+            animation: iconPulse 0.6s ease;
+        }
+
+        @keyframes iconPulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Ripple Effect */
+        .outcome-card {
+            overflow: hidden;
+        }
+
+        .outcome-card::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 54, 33, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .outcome-card:active::after {
+            width: 500px;
+            height: 500px;
+        }
+
+        /* Ensure content is above effects */
+        .outcome-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1536px) {
+            .outcomes-section .container-custom {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+
+        @media (max-width: 1280px) {
+            .outcomes-section .container-custom {
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+            
+            .outcomes-section h2 {
+                font-size: 64px !important;
+                line-height: 70px !important;
+            }
+            
+            .outcomes-section p {
+                font-size: 26px !important;
+                line-height: 39px !important;
+            }
+
+            .outcome-card h3 {
+                font-size: 24px !important;
+                line-height: 36px !important;
+            }
+
+            .outcome-card p {
+                font-size: 20px !important;
+                line-height: 30px !important;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .outcomes-section {
+                min-height: auto;
+                padding: 60px 0;
+            }
+            
+            .outcomes-section .container-custom {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            
+            .outcomes-section h2 {
+                font-size: 52px !important;
+                line-height: 58px !important;
+            }
+            
+            .outcomes-section p {
+                font-size: 22px !important;
+                line-height: 33px !important;
+            }
+
+            .outcome-card {
+                min-height: auto;
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .outcomes-section .container-custom {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            
+            .outcomes-section h2 {
+                font-size: 40px !important;
+                line-height: 48px !important;
+            }
+            
+            .outcomes-section p {
+                font-size: 20px !important;
+                line-height: 30px !important;
+            }
+            
+            .icon-wrapper {
+                width: 70px !important;
+                height: 70px !important;
+            }
+            
+            .icon-wrapper svg {
+                width: 36px !important;
+                height: 36px !important;
+            }
+            
+            .outcome-card h3 {
+                font-size: 22px !important;
+                line-height: 32px !important;
+            }
+            
+            .outcome-card p {
+                font-size: 18px !important;
+                line-height: 27px !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .outcomes-section {
+                padding: 40px 0;
+            }
+            
+            .outcomes-section .container-custom {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            
+            .outcomes-section h2 {
+                font-size: 32px !important;
+                line-height: 40px !important;
+            }
+            
+            .outcomes-section p {
+                font-size: 18px !important;
+                line-height: 27px !important;
+            }
+            
+            .outcome-card {
+                padding: 1.5rem;
+            }
+        }

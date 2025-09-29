@@ -1,0 +1,269 @@
+
+        /* Approach Section Styles */
+        .approach-section {
+            position: relative;
+            background: #ffffff;
+            font-family: 'Instrument Sans', sans-serif;
+        }
+
+        .text-brand-dark {
+            color: #121212;
+        }
+
+        .text-brand-red {
+            color: #FF3621;
+        }
+
+        /* Container Custom */
+        .approach-section .container-custom {
+            width: 100%;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding-left: 51px;
+            padding-right: 51px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out 0.2s;
+            animation-fill-mode: backwards;
+        }
+
+        .animate-slide-up-delayed {
+            animation: slideUp 0.8s ease-out 0.4s;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-slide-in-right {
+            animation: slideInRight 1s ease-out 0.6s;
+            animation-fill-mode: backwards;
+        }
+
+        /* Pulse animations for decorative elements */
+        @keyframes pulseSlow {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes pulseSlowDelayed {
+            0%, 100% {
+                opacity: 0.2;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.4;
+                transform: scale(1.15);
+            }
+        }
+
+        .animate-pulse-slow {
+            animation: pulseSlow 4s ease-in-out infinite;
+        }
+
+        .animate-pulse-slow-delayed {
+            animation: pulseSlowDelayed 5s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        /* Diagram Container */
+        .diagram-container {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .diagram-container:hover {
+            transform: scale(1.02);
+        }
+
+        .diagram-container img {
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+            transition: filter 0.3s ease;
+        }
+
+        .diagram-container:hover img {
+            filter: drop-shadow(0 15px 40px rgba(255, 54, 33, 0.2));
+        }
+
+        /* Fallback Placeholder */
+        .fallback-placeholder {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1536px) {
+            .approach-section .container-custom {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            .diagram-container {
+                height: 600px;
+            }
+        }
+
+        @media (max-width: 1280px) {
+            .approach-section .container-custom {
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+            
+            .approach-section h2 {
+                font-size: 64px !important;
+                line-height: 70px !important;
+            }
+            
+            .approach-section p {
+                font-size: 26px !important;
+                line-height: 39px !important;
+            }
+
+            .diagram-container {
+                height: 550px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .approach-section {
+                padding: 60px 0;
+            }
+            
+            .approach-section .container-custom {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            
+            .approach-section h2 {
+                font-size: 52px !important;
+                line-height: 58px !important;
+            }
+            
+            .approach-section p {
+                font-size: 22px !important;
+                line-height: 33px !important;
+            }
+
+            .diagram-container {
+                height: 500px;
+            }
+
+            .approach-section .grid {
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .approach-section .container-custom {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            
+            .approach-section h2 {
+                font-size: 40px !important;
+                line-height: 48px !important;
+            }
+            
+            .approach-section p {
+                font-size: 20px !important;
+                line-height: 30px !important;
+            }
+
+            .diagram-container {
+                height: 450px;
+            }
+
+            .approach-section .grid {
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .approach-section {
+                padding: 40px 0;
+            }
+            
+            .approach-section .container-custom {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            
+            .approach-section h2 {
+                font-size: 32px !important;
+                line-height: 40px !important;
+            }
+            
+            .approach-section p {
+                font-size: 18px !important;
+                line-height: 27px !important;
+            }
+
+            .diagram-container {
+                height: 400px;
+            }
+
+            /* Decorative elements smaller on mobile */
+            .animate-pulse-slow,
+            .animate-pulse-slow-delayed {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        /* Landscape orientation adjustments */
+        @media (max-height: 600px) and (orientation: landscape) {
+            .diagram-container {
+                height: 400px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .approach-section {
+                page-break-inside: avoid;
+            }
+
+            .animate-pulse-slow,
+            .animate-pulse-slow-delayed {
+                display: none;
+            }
+        }
