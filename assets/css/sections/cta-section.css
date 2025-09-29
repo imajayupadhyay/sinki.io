@@ -1,0 +1,243 @@
+
+        /* CTA Section Styles */
+        .cta-section {
+            position: relative;
+            background: #ffffff;
+            font-family: 'Instrument Sans', sans-serif;
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        .text-brand-dark {
+            color: #121212;
+        }
+
+        .text-brand-red {
+            color: #FF3621;
+        }
+
+        .bg-brand-red {
+            background-color: #FF3621;
+        }
+
+        .border-brand-red {
+            border-color: #FF3621;
+        }
+
+        /* Container Custom */
+        .cta-section .container-custom {
+            width: 100%;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding-left: 51px;
+            padding-right: 51px;
+        }
+
+        /* CTA Card Wrapper - adds extra spacing */
+        .cta-card-wrapper {
+            padding-left: 208px;
+            padding-right: 208px;
+        }
+
+        /* CTA Card */
+        .cta-card {
+            transition: all 0.3s ease;
+        }
+
+        .cta-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(255, 54, 33, 0.15);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out 0.2s;
+            animation-fill-mode: backwards;
+        }
+
+        .animate-slide-up-delayed {
+            animation: slideUp 0.8s ease-out 0.4s;
+            animation-fill-mode: backwards;
+        }
+
+        .animate-fade-in-up {
+            animation: slideUp 1s ease-out 0.6s;
+            animation-fill-mode: backwards;
+        }
+
+        /* Button Hover Effect */
+        .btn-hover-effect {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-hover-effect::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-hover-effect:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-hover-effect:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1536px) {
+            .cta-section .container-custom {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            .cta-card-wrapper {
+                padding-left: 150px;
+                padding-right: 150px;
+            }
+        }
+
+        @media (max-width: 1280px) {
+            .cta-section .container-custom {
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+
+            .cta-card-wrapper {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+            
+            .cta-section h2 {
+                font-size: 52px !important;
+                line-height: 58px !important;
+            }
+            
+            .cta-section p {
+                font-size: 22px !important;
+                line-height: 33px !important;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .cta-section {
+                padding: 60px 0;
+            }
+            
+            .cta-section .container-custom {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            .cta-card-wrapper {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+            
+            .cta-section h2 {
+                font-size: 48px !important;
+                line-height: 54px !important;
+            }
+            
+            .cta-section p {
+                font-size: 20px !important;
+                line-height: 30px !important;
+            }
+
+            .cta-card {
+                padding: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cta-section .container-custom {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .cta-card-wrapper {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            
+            .cta-section h2 {
+                font-size: 36px !important;
+                line-height: 42px !important;
+            }
+            
+            .cta-section p {
+                font-size: 18px !important;
+                line-height: 27px !important;
+            }
+
+            .cta-card {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .cta-section {
+                padding: 40px 0;
+            }
+            
+            .cta-section .container-custom {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .cta-card-wrapper {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            
+            .cta-section h2 {
+                font-size: 28px !important;
+                line-height: 36px !important;
+            }
+            
+            .cta-section p {
+                font-size: 16px !important;
+                line-height: 24px !important;
+            }
+
+            .cta-card {
+                padding: 1.5rem;
+                border-radius: 20px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .cta-section {
+                page-break-inside: avoid;
+            }
+        }

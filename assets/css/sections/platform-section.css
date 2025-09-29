@@ -1,0 +1,342 @@
+
+        /* Platforms Section Styles */
+        .platforms-section {
+            position: relative;
+            background: #ffffff;
+            font-family: 'Instrument Sans', sans-serif;
+        }
+
+        .text-brand-dark {
+            color: #121212;
+        }
+
+        .bg-brand-gray {
+            background-color: #E0EAE4;
+        }
+
+        .border-brand-gray {
+            border-color: #E0EAE4;
+        }
+
+        /* Container Custom */
+        .platforms-section .container-custom {
+            width: 100%;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding-left: 51px;
+            padding-right: 51px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out 0.2s;
+            animation-fill-mode: backwards;
+        }
+
+        .animate-slide-up-delayed {
+            animation: slideUp 0.8s ease-out 0.4s;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-slide-in-right {
+            animation: slideInRight 1s ease-out 0.6s;
+            animation-fill-mode: backwards;
+        }
+
+        /* Pulse animations for decorative elements */
+        @keyframes pulseSlow {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes pulseSlowDelayed {
+            0%, 100% {
+                opacity: 0.2;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.4;
+                transform: scale(1.15);
+            }
+        }
+
+        .animate-pulse-slow {
+            animation: pulseSlow 4s ease-in-out infinite;
+        }
+
+        .animate-pulse-slow-delayed {
+            animation: pulseSlowDelayed 5s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        /* Platform Logo Cards */
+        .platform-logo-card {
+            position: relative;
+            transition: all 0.3s ease;
+            background: white;
+            animation: cardFloat 3s ease-in-out infinite;
+        }
+
+        .platform-logo-card:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .platform-logo-card:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .platform-logo-card:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .platform-logo-card:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+
+        .platform-logo-card:nth-child(5) {
+            animation-delay: 2s;
+        }
+
+        .platform-logo-card:nth-child(6) {
+            animation-delay: 2.5s;
+        }
+
+        @keyframes cardFloat {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .platform-logo-card:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-color: #FF3621;
+            animation: none;
+            transform: translateY(-12px);
+        }
+
+        .platform-logo-card img {
+            max-height: 80px;
+            transition: transform 0.3s ease;
+            animation: imageFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes imageFloat {
+            0%, 100% {
+                transform: translateX(0px) translateY(0px);
+            }
+            25% {
+                transform: translateX(2px) translateY(-2px);
+            }
+            50% {
+                transform: translateX(0px) translateY(-4px);
+            }
+            75% {
+                transform: translateX(-2px) translateY(-2px);
+            }
+        }
+
+        .platform-logo-card:hover img {
+            transform: scale(1.05);
+            animation: none;
+        }
+
+        /* Logo Placeholder */
+        .logo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            min-height: 80px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1536px) {
+            .platforms-section .container-custom {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+
+        @media (max-width: 1280px) {
+            .platforms-section .container-custom {
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+            
+            .platforms-section h2 {
+                font-size: 64px !important;
+                line-height: 70px !important;
+            }
+            
+            .platforms-section p {
+                font-size: 26px !important;
+                line-height: 39px !important;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .platforms-section {
+                padding: 60px 0;
+            }
+            
+            .platforms-section .container-custom {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            
+            .platforms-section h2 {
+                font-size: 52px !important;
+                line-height: 58px !important;
+            }
+            
+            .platforms-section p {
+                font-size: 22px !important;
+                line-height: 33px !important;
+            }
+
+            .platforms-section .grid {
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .platforms-section .container-custom {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            
+            .platforms-section h2 {
+                font-size: 40px !important;
+                line-height: 48px !important;
+            }
+            
+            .platforms-section p {
+                font-size: 20px !important;
+                line-height: 30px !important;
+            }
+
+            .platforms-section .grid {
+                gap: 2rem;
+            }
+
+            .platforms-grid .grid {
+                gap: 1rem;
+            }
+
+            .platforms-grid .grid-cols-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .platforms-grid .grid-cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .platform-logo-card {
+                min-height: 120px;
+                padding: 1.5rem;
+            }
+
+            .platform-logo-card img {
+                max-height: 60px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .platforms-section {
+                padding: 40px 0;
+            }
+            
+            .platforms-section .container-custom {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            
+            .platforms-section h2 {
+                font-size: 32px !important;
+                line-height: 40px !important;
+            }
+            
+            .platforms-section p {
+                font-size: 18px !important;
+                line-height: 27px !important;
+            }
+
+            .platforms-grid .grid-cols-3,
+            .platforms-grid .grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .platform-logo-card {
+                min-height: 100px;
+                padding: 1.25rem;
+                width: 100%;
+            }
+
+            .platform-logo-card img {
+                max-height: 50px;
+            }
+
+            /* Decorative elements smaller on mobile */
+            .animate-pulse-slow,
+            .animate-pulse-slow-delayed {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .platforms-section {
+                page-break-inside: avoid;
+            }
+
+            .animate-pulse-slow,
+            .animate-pulse-slow-delayed {
+                display: none;
+            }
+        }

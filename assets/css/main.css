@@ -1,5 +1,5 @@
 /* Main Stylesheet */
-@import url('./sections/navigation.css');
+@import url('./navigation.css');
 @import url('./hero.css');
 @import url('./sections/services.css');
 @import url('./sections/approach.css');
@@ -11,6 +11,11 @@
 @import url('./sections/you-can-expect.css');
 @import url('./sections/approch-section.css');
 @import url('./sections/core-services.css');
+@import url('./sections/platform-section.css');
+@import url('./sections/whatsetup-apartsection.css');
+@import url('./sections/insight-section.css');
+@import url('./sections/cta-section.css');
+@import url('./sections/footer.css');
 
 /* Global Styles */
 * {

@@ -23,97 +23,84 @@
 <body class="bg-white text-brand-dark antialiased">
     
     <!-- Navigation Section -->
-    <div id="navigation">
-        <nav class="navigation bg-white/75 backdrop-blur-sm shadow-custom fixed top-6 left-6 right-6 z-50 rounded-[20px] border border-brand-gray">
-    <div class="container-custom">
-        <div class="flex items-center justify-between h-[100px] px-7">
-            <!-- Logo -->
-            <div class="flex items-center">
-                <a href="#" class="flex items-center space-x-2 logo-container">
-                    <div class="w-[60px] h-[60px] bg-brand-red rounded-lg flex items-center justify-center transform transition-transform duration-300 hover:rotate-6">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 5L30 15L20 25L30 35L10 25L20 15L10 5Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <span class="text-2xl font-bold text-brand-dark">Sinki</span>
-                </a>
-            </div>
+<!-- Navigation Section -->
+<div id="navigation">
+    <nav class="navigation bg-white/75 backdrop-blur-sm shadow-custom fixed top-6 left-6 right-6 z-50 rounded-[20px] border border-brand-gray">
+        <div class="container-custom">
+            <div class="flex items-center justify-between h-[100px] px-7">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center space-x-2 logo-container">
+                        <img class="sinkilogoclass" src="./assets/images/sinkilogo.png" alt="Sinki Logo">
+                    </a>
+                </div>
 
-            <!-- Desktop Navigation -->
-            <div class="hidden lg:flex items-center space-x-12">
-                <div class="flex items-center space-x-12">
-                    <div class="nav-item">
-                        <a href="#services" class="nav-link text-brand-dark text-lg font-bold uppercase tracking-wide hover:text-brand-red transition-colors duration-300 flex items-center gap-2">
-                            Services
-                            <svg class="w-4 h-4 transform transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#company" class="nav-link text-brand-dark text-lg font-bold uppercase tracking-wide hover:text-brand-red transition-colors duration-300 flex items-center gap-2">
-                            Company
-                            <svg class="w-4 h-4 transform transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#insights" class="nav-link text-brand-dark text-lg font-bold uppercase tracking-wide hover:text-brand-red transition-colors duration-300 flex items-center gap-2">
-                            Insights
-                            <svg class="w-4 h-4 transform transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#contact" class="nav-link text-brand-dark text-lg font-bold uppercase tracking-wide hover:text-brand-red transition-colors duration-300 flex items-center gap-2">
-                            Contact Us
-                            <svg class="w-4 h-4 transform transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                            </svg>
-                        </a>
+                <!-- Desktop Navigation - Centered -->
+                <div class="hidden lg:flex items-center absolute left-1/2 transform -translate-x-1/2">
+                    <div class="flex items-center space-x-12">
+                        <div class="nav-item">
+                            <a href="#services" class="nav-link text-brand-dark text-lg font-bold uppercase tracking-wide hover:text-brand-red transition-colors duration-300">
+                                Services
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#company" class="nav-link text-brand-dark text-lg font-bold uppercase tracking-wide hover:text-brand-red transition-colors duration-300">
+                                Company
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#insights" class="nav-link text-brand-dark text-lg font-bold uppercase tracking-wide hover:text-brand-red transition-colors duration-300">
+                                Insights
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#contact" class="nav-link text-brand-dark text-lg font-bold uppercase tracking-wide hover:text-brand-red transition-colors duration-300">
+                                Contact Us
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Get Started Button -->
-            <div class="hidden lg:block">
-                <a href="#get-started" class="inline-flex items-center px-10 py-3.5 border-2 border-brand-dark rounded-full text-brand-dark text-lg font-bold uppercase tracking-wide hover:bg-brand-dark hover:text-white transition-all duration-300 btn-hover-effect">
-                    Get Started
-                </a>
-            </div>
+                <!-- Get Started Button -->
+                <div class="hidden lg:block">
+                    <a href="#get-started" class="inline-flex items-center px-10 py-3.5 border-2 border-brand-dark rounded-full text-brand-dark text-lg font-bold uppercase tracking-wide hover:bg-brand-dark hover:text-white transition-all duration-300 btn-hover-effect">
+                        Get Started
+                    </a>
+                </div>
 
-            <!-- Mobile Menu Button -->
-            <button class="lg:hidden mobile-menu-btn p-2">
-                <svg class="w-8 h-8 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden mobile-menu-btn p-2 z-50 relative">
+                    <svg class="w-8 h-8 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
         </div>
-    </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu lg:hidden fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50">
-        <div class="p-6">
+    <div class="mobile-menu lg:hidden fixed top-0 right-0 h-full w-full sm:w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50">
+        <div class="p-6 h-full flex flex-col">
             <button class="mobile-menu-close mb-8 ml-auto block">
                 <svg class="w-8 h-8 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                 </svg>
             </button>
             <div class="flex flex-col space-y-6">
-                <a href="#services" class="text-brand-dark text-lg font-bold uppercase">Services</a>
-                <a href="#company" class="text-brand-dark text-lg font-bold uppercase">Company</a>
-                <a href="#insights" class="text-brand-dark text-lg font-bold uppercase">Insights</a>
-                <a href="#contact" class="text-brand-dark text-lg font-bold uppercase">Contact Us</a>
-                <a href="#get-started" class="inline-flex items-center justify-center px-10 py-3.5 border-2 border-brand-dark rounded-full text-brand-dark text-lg font-bold uppercase mt-6">
+                <a href="#services" class="text-brand-dark text-lg font-bold uppercase hover:text-brand-red transition-colors mobile-menu-link">Services</a>
+                <a href="#company" class="text-brand-dark text-lg font-bold uppercase hover:text-brand-red transition-colors mobile-menu-link">Company</a>
+                <a href="#insights" class="text-brand-dark text-lg font-bold uppercase hover:text-brand-red transition-colors mobile-menu-link">Insights</a>
+                <a href="#contact" class="text-brand-dark text-lg font-bold uppercase hover:text-brand-red transition-colors mobile-menu-link">Contact Us</a>
+                <a href="#get-started" class="inline-flex items-center justify-center px-10 py-3.5 border-2 border-brand-dark rounded-full text-brand-dark text-lg font-bold uppercase mt-6 hover:bg-brand-dark hover:text-white transition-all">
                     Get Started
                 </a>
             </div>
         </div>
     </div>
-</nav>
-    </div>
+</div>
     
     <!-- Hero Section -->
     <div id="hero">
@@ -163,17 +150,17 @@
     </div>
 
     <!-- Decorative Elements -->
-    <div class="absolute bottom-40 left-20 animate-float">
+    <!-- <div class="absolute bottom-40 left-20 animate-float">
         <div class="w-[90px] h-[90px] bg-brand-red rounded-full flex items-center justify-center shadow-lg">
             <div class="w-[45px] h-[45px] bg-white rounded-sm transform rotate-45"></div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="absolute bottom-40 right-20 animate-float-delayed">
+    <!-- <div class="absolute bottom-40 right-20 animate-float-delayed">
         <div class="w-[90px] h-[90px] bg-brand-red rounded-full flex items-center justify-center shadow-lg">
             <div class="w-[45px] h-[45px] bg-white"></div>
         </div>
-    </div>
+    </div> -->
 </section>
 
 <!-- Partner Badge Section - ADD THIS -->
@@ -556,7 +543,7 @@
         <img src="./assets/images/heroobannersinki.png" 
              alt="Background" 
              class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#f5f5dc]/95 via-[#f5f5dc]/90 to-[#f5f5dc]/95"></div>
+        <div class="absolute inset-0 "></div>
     </div>
 
     <div class="container-custom max-w-[1920px] mx-auto px-12 lg:px-24 relative z-10">
@@ -710,17 +697,549 @@
             </a>
         </div>
     </div>
-
-
 </section>
 
-    <!-- Main Content Container -->
-    <main class="w-full">
-        <!-- Additional sections will be loaded here -->
-    </main>
-    
-    <!-- Footer Section -->
-    <div id="footer"></div>
+<section class="platforms-section bg-white py-20 lg:py-32 relative overflow-hidden">
+    <div class="container-custom max-w-[1920px] mx-auto px-12 lg:px-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            
+            <!-- Left Content -->
+            <div class="platforms-content">
+                <!-- Section Label -->
+                <div class="mb-8 animate-fade-in">
+                    <span class="text-brand-dark text-lg font-medium uppercase tracking-[1.8px]">
+                        Platforms We Work With
+                    </span>
+                </div>
+
+                <!-- Main Heading -->
+                <h2 class="text-brand-dark font-semibold text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 max-w-[852px] animate-slide-up">
+                    Built on the Platforms You Trust
+                </h2>
+
+                <!-- Description -->
+                <p class="text-brand-dark text-xl lg:text-[30px] leading-relaxed lg:leading-[45px] mb-12 max-w-[760px] animate-slide-up-delayed">
+                    We bring Databricks to life on the enterprise platforms you already rely on.
+                </p>
+            </div>
+
+            <!-- Right Content - Platform Logos Grid -->
+            <div class="platforms-grid relative animate-slide-in-right">
+                <!-- Logo Grid Container - Row Structure -->
+                <div class="flex flex-col gap-6">
+                    
+                    <!-- Row 1 - Single Card (Databricks) -->
+                    <div class="flex justify-center">
+                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[143px] w-[286px]">
+                            <img src="./assets/images/platforms/databricks-logo.png" 
+                                 alt="Databricks" 
+                                 class="max-w-full h-auto object-contain"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="logo-placeholder hidden">
+                                <span class="text-brand-dark font-semibold text-lg">Databricks</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 - Three Cards (Azure, Google Cloud, AWS) -->
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[143px]">
+                            <img src="./assets/images/platforms/azure-logo.png" 
+                                 alt="Microsoft Azure" 
+                                 class="max-w-full h-auto object-contain"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="logo-placeholder hidden">
+                                <span class="text-brand-dark font-semibold text-lg">Azure</span>
+                            </div>
+                        </div>
+
+                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[143px]">
+                            <img src="./assets/images/platforms/google-cloud-logo.png" 
+                                 alt="Google Cloud" 
+                                 class="max-w-full h-auto object-contain"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="logo-placeholder hidden">
+                                <span class="text-brand-dark font-semibold text-lg">Google Cloud</span>
+                            </div>
+                        </div>
+
+                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[143px]">
+                            <img src="./assets/images/platforms/aws-logo.png" 
+                                 alt="AWS" 
+                                 class="max-w-full h-auto object-contain"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="logo-placeholder hidden">
+                                <span class="text-brand-dark font-semibold text-lg">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 - Two Cards (Power BI, Tableau) -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[143px]">
+                            <img src="./assets/images/platforms/powerbi-logo.png" 
+                                 alt="Power BI" 
+                                 class="max-w-full h-auto object-contain"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="logo-placeholder hidden">
+                                <span class="text-brand-dark font-semibold text-lg">Power BI</span>
+                            </div>
+                        </div>
+
+                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[143px]">
+                            <img src="./assets/images/platforms/tableau-logo.png" 
+                                 alt="Tableau" 
+                                 class="max-w-full h-auto object-contain"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="logo-placeholder hidden">
+                                <span class="text-brand-dark font-semibold text-lg">Tableau</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Decorative Elements -->
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-red/10 rounded-full blur-3xl animate-pulse-slow"></div>
+                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-brand-red/10 rounded-full blur-3xl animate-pulse-slow-delayed"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="what-sets-us-apart-section relative overflow-hidden py-20 lg:py-32">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+        <img src="./assets/images/heroobannersinki.png" 
+             alt="Background" 
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 "></div>
+    </div>
+
+    <div class="container-custom max-w-[1920px] mx-auto px-12 lg:px-24 relative z-10">
+        <!-- Section Label -->
+        <div class="mb-8 text-center animate-fade-in">
+            <span class="text-brand-dark text-lg font-medium uppercase tracking-[1.8px]">
+                What Sets Us Apart
+            </span>
+        </div>
+
+        <!-- Main Heading -->
+        <h2 class="text-brand-dark font-semibold text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 text-center max-w-[1210px] mx-auto animate-slide-up">
+            Your Databricks Partner, Every Step of the Way
+        </h2>
+
+        <!-- Description -->
+        <p class="text-brand-dark text-xl lg:text-[28px] leading-relaxed lg:leading-[42px] mb-16 text-center max-w-[1210px] mx-auto animate-slide-up-delayed">
+            We don't just implement Databricks. We simplify it, tailor it, and make it deliver real business outcomes.
+        </p>
+
+        <!-- Features Cards Grid - 4 Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Card 1: We Simplify Databricks -->
+            <div class="feature-card group bg-white/50 backdrop-blur-sm border border-black/10 rounded-[25px] p-10 hover:bg-white/80 hover:border-brand-red transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
+                <!-- Icon -->
+                <div class="mb-8 flex justify-center">
+                    <div class="icon-wrapper w-[90px] h-[90px] bg-brand-red rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Content -->
+                <div class="text-center">
+                    <h3 class="text-brand-dark text-[24px] font-semibold leading-[31.2px] tracking-[0.48px] mb-3 group-hover:text-brand-red transition-colors duration-300">
+                        We Simplify Databricks
+                    </h3>
+                    <p class="text-brand-dark text-[18px] font-normal leading-[27px] tracking-[0.36px]">
+                        Tailored to your business, not one-size-fits-all.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2: We Cut the Things That Slow You Down -->
+            <div class="feature-card group bg-white/50 backdrop-blur-sm border border-black/10 rounded-[25px] p-10 hover:bg-white/80 hover:border-brand-red transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
+                <!-- Icon -->
+                <div class="mb-8 flex justify-center">
+                    <div class="icon-wrapper w-[90px] h-[90px] bg-brand-red rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Content -->
+                <div class="text-center">
+                    <h3 class="text-brand-dark text-[24px] font-semibold leading-[31.2px] tracking-[0.48px] mb-3 group-hover:text-brand-red transition-colors duration-300">
+                        We Cut the Things That Slow You Down
+                    </h3>
+                    <p class="text-brand-dark text-[18px] font-normal leading-[27px] tracking-[0.36px]">
+                        We fix data, integrations and compliance issues fast.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3: We Execute Without Drama -->
+            <div class="feature-card group bg-white/50 backdrop-blur-sm border border-black/10 rounded-[25px] p-10 hover:bg-white/80 hover:border-brand-red transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
+                <!-- Icon -->
+                <div class="mb-8 flex justify-center">
+                    <div class="icon-wrapper w-[90px] h-[90px] bg-brand-red rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Content -->
+                <div class="text-center">
+                    <h3 class="text-brand-dark text-[24px] font-semibold leading-[31.2px] tracking-[0.48px] mb-3 group-hover:text-brand-red transition-colors duration-300">
+                        We Execute Without Drama
+                    </h3>
+                    <p class="text-brand-dark text-[18px] font-normal leading-[27px] tracking-[0.36px]">
+                        Onshore or offshore, our team delivers on time, on budget, and keeps things simple.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4: We're Candid & Collaborative -->
+            <div class="feature-card group bg-white/50 backdrop-blur-sm border border-black/10 rounded-[25px] p-10 hover:bg-white/80 hover:border-brand-red transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
+                <!-- Icon -->
+                <div class="mb-8 flex justify-center">
+                    <div class="icon-wrapper w-[90px] h-[90px] bg-brand-red rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Content -->
+                <div class="text-center">
+                    <h3 class="text-brand-dark text-[24px] font-semibold leading-[31.2px] tracking-[0.48px] mb-3 group-hover:text-brand-red transition-colors duration-300">
+                        We're Candid & Collaborative
+                    </h3>
+                    <p class="text-brand-dark text-[18px] font-normal leading-[27px] tracking-[0.36px]">
+                        We talk, challenge assumptions, and make sure your Databricks journey stays on track.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="insights-section bg-white py-20 lg:py-32 relative overflow-hidden">
+    <div class="container-custom max-w-[1920px] mx-auto px-12 lg:px-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            
+            <!-- Left Content -->
+            <div class="insights-content">
+                <!-- Section Label -->
+                <div class="mb-8 animate-fade-in">
+                    <span class="text-brand-dark text-lg font-medium uppercase tracking-[1.8px]">
+                        Insights & Resources
+                    </span>
+                </div>
+
+                <!-- Main Heading -->
+                <h2 class="text-brand-dark font-semibold text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 max-w-[834px] animate-slide-up">
+                    Latest Insights on Databricks, Data & AI
+                </h2>
+
+                <!-- Description -->
+                <p class="text-brand-dark text-xl lg:text-[30px] leading-relaxed lg:leading-[45px] mb-12 max-w-[769px] animate-slide-up-delayed">
+                    Stay ahead with guides, blogs, and practical insights to help your enterprise scale smarter with Databricks.
+                </p>
+
+                <!-- CTA Button -->
+                <div class="animate-fade-in-up">
+                    <a href="#resources" class="inline-flex items-center gap-3 px-8 py-3 bg-brand-dark border-2 border-brand-dark rounded-full text-white text-lg font-bold capitalize hover:bg-transparent hover:text-brand-dark transition-all duration-300 btn-hover-effect">
+                        Explore Resources
+                        <svg class="w-10 h-10 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Content - Blog Cards -->
+            <div class="insights-cards flex gap-6 lg:gap-8 animate-slide-in-right max-w-full overflow-visible">
+                
+                <!-- Blog Card 1 - Offset Down -->
+                <div class="blog-card blog-card-1 group bg-white border border-brand-gray rounded-[25px] overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2 mt-20">
+                    <!-- Image Container -->
+                    <div class="relative overflow-hidden h-[229px]">
+                        <img src="./assets/images/blog/blog-1.jpg" 
+                             alt="How To Make Your Data Ready For AI" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="blog-image-placeholder hidden items-center justify-center w-full h-full bg-gray-200">
+                            <span class="text-gray-500 font-semibold">Blog Image</span>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-6 flex flex-col h-[180px]">
+                        <!-- Badge and Arrow -->
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="inline-block px-5 py-1 bg-brand-gray rounded-[20px] text-brand-dark text-sm font-semibold tracking-wide uppercase">
+                                Blog
+                            </span>
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-brand-dark group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-brand-dark text-[28px] font-semibold leading-[33.6px] tracking-[0.56px] mb-auto group-hover:text-brand-red transition-colors duration-300">
+                            How To Make Your Data Ready For AI
+                        </h3>
+
+                        <!-- Date -->
+                        <p class="text-gray-500 text-base tracking-wide mt-auto">
+                            13 Sep, 2025
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Blog Card 2 - Offset Up -->
+                <div class="blog-card blog-card-2 group bg-white border border-brand-gray rounded-[25px] overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2 -mt-10">
+                    <!-- Image Container -->
+                    <div class="relative overflow-hidden h-[229px]">
+                        <img src="./assets/images/blog/blog-2.jpg" 
+                             alt="The Anatomy Of A Healthcare Data Strategy" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="blog-image-placeholder hidden items-center justify-center w-full h-full bg-gray-200">
+                            <span class="text-gray-500 font-semibold">Blog Image</span>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-6 flex flex-col h-[180px]">
+                        <!-- Badge and Arrow -->
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="inline-block px-5 py-1 bg-brand-gray rounded-[20px] text-brand-dark text-sm font-semibold tracking-wide uppercase">
+                                Blog
+                            </span>
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-brand-dark group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-brand-dark text-[28px] font-semibold leading-[33.6px] tracking-[0.56px] mb-auto group-hover:text-brand-red transition-colors duration-300">
+                            The Anatomy Of A Healthcare Data Strategy
+                        </h3>
+
+                        <!-- Date -->
+                        <p class="text-gray-500 text-base tracking-wide mt-auto">
+                            02 Sep, 2025
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="cta-section bg-white py-0 pb-20 lg:pb-24 relative overflow-hidden">
+    <div class="container-custom max-w-[1920px] mx-auto px-12 lg:px-24">
+        <!-- CTA Card Container with spacing -->
+        <div class="cta-card-wrapper px-4 lg:px-16">
+            <!-- CTA Card with Background Image -->
+            <div class="cta-card relative rounded-[30px] p-12 lg:p-16 text-center overflow-hidden shadow-lg">
+                <!-- Background Image -->
+                <div class="absolute inset-0 z-0">
+                    <img src="./assets/images/heroobannersinki.png" 
+                         alt="Background" 
+                         class="w-full h-full object-cover rounded-[30px]">
+                </div>
+
+                <!-- Content -->
+                <div class="relative z-10 max-w-[1469px] mx-auto">
+                    <!-- Section Label -->
+                    <div class="mb-6 animate-fade-in">
+                        <span class="text-brand-dark text-lg font-medium uppercase tracking-[1.8px]">
+                            Let's Get Started
+                        </span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h2 class="text-brand-dark font-semibold text-4xl lg:text-[64px] leading-tight lg:leading-[70.4px] mb-6 animate-slide-up">
+                        Ready to Get More from Databricks?
+                    </h2>
+
+                    <!-- Description -->
+                    <p class="text-brand-dark text-xl lg:text-[24px] leading-relaxed lg:leading-[36px] mb-10 max-w-[770px] mx-auto animate-slide-up-delayed">
+                        Let's simplify your Databricks journey, and turn data into real results.
+                    </p>
+
+                    <!-- CTA Button -->
+                    <div class="animate-fade-in-up">
+                        <a href="#get-started" class="inline-flex items-center gap-3 px-8 py-4 bg-brand-red border-2 border-brand-red rounded-full text-white text-lg font-bold capitalize hover:bg-transparent hover:text-brand-red transition-all duration-300 btn-hover-effect shadow-lg hover:shadow-2xl">
+                            Get Started Now
+                            <svg class="w-10 h-10 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-section bg-brand-dark pt-16 pb-8 relative">
+    <div class="container-custom max-w-[1920px] mx-auto px-12 lg:px-24">
+        
+        <!-- Main Footer Content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 pb-12 border-b border-white/10">
+            
+            <!-- Column 1: Logo and Description -->
+            <div class="footer-col">
+                <!-- Logo -->
+                <div class="mb-6">
+                    <img src="./assets/images/logo-white.png" 
+                         alt="Sinki Logo" 
+                         class="h-20 w-auto"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="logo-placeholder hidden items-center gap-2">
+                        <div class="w-12 h-12 bg-brand-red rounded-lg flex items-center justify-center">
+                            <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 5L30 15L20 25L30 35L10 25L20 15L10 5Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <span class="text-white text-2xl font-bold">Sinki</span>
+                    </div>
+                </div>
+                
+                <!-- Description -->
+                <p class="text-white text-xl leading-[28px] tracking-[0.4px] mb-8 max-w-[315px]">
+                    Data & AI That Drives Real Business Impact
+                </p>
+
+                <!-- Footer Links -->
+                <div class="flex items-center gap-6 text-white text-xl font-medium">
+                    <a href="#help" class="hover:text-brand-red transition-colors duration-300">Help</a>
+                    <span class="text-white/30">|</span>
+                    <a href="#privacy" class="hover:text-brand-red transition-colors duration-300">Privacy Policy</a>
+                    <span class="text-white/30">|</span>
+                    <a href="#terms" class="hover:text-brand-red transition-colors duration-300">Term's & Condition</a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Link -->
+            <div class="footer-col">
+                <h3 class="text-white text-2xl font-bold tracking-[0.48px] mb-8">
+                    Quick Link
+                </h3>
+                <ul class="space-y-5">
+                    <li>
+                        <a href="#company" class="text-white text-xl font-medium hover:text-brand-red transition-colors duration-300 inline-block">
+                            Company
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#insights" class="text-white text-xl font-medium hover:text-brand-red transition-colors duration-300 inline-block">
+                            Insights
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#industries" class="text-white text-xl font-medium hover:text-brand-red transition-colors duration-300 inline-block">
+                            Industries
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="text-white text-xl font-medium hover:text-brand-red transition-colors duration-300 inline-block">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div class="footer-col">
+                <h3 class="text-white text-2xl font-bold tracking-[0.48px] mb-8">
+                    Services
+                </h3>
+                <ul class="space-y-5">
+                    <li>
+                        <a href="#service-1" class="text-white text-xl font-medium hover:text-brand-red transition-colors duration-300 inline-block">
+                            Data Engineering & Modernization
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#service-2" class="text-white text-xl font-medium hover:text-brand-red transition-colors duration-300 inline-block">
+                            Data Management & Governance
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#service-3" class="text-white text-xl font-medium hover:text-brand-red transition-colors duration-300 inline-block">
+                            Data Analytics & Business Intelligence
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#service-4" class="text-white text-xl font-medium hover:text-brand-red transition-colors duration-300 inline-block">
+                            Data Science
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-col">
+                <h3 class="text-white text-2xl font-bold tracking-[0.48px] mb-8">
+                    Contact
+                </h3>
+                
+                <!-- Phone and Email -->
+                <div class="mb-8">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg class="w-9 h-9 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                            </svg>
+                        </div>
+                        <div class="text-white text-xl font-medium leading-[28px]">
+                            <p>+123 456 789</p>
+                            <p>domain@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="flex items-start gap-4">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-9 h-9 text-black" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <div class="text-white text-xl font-medium leading-[28px] max-w-[340px]">
+                        <p>D-5, Third Floor, Logix Infotech Park, Sec- 59, Noida – 201301</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="pt-8 text-center">
+            <p class="text-white text-lg font-medium leading-[25.2px] tracking-[0.36px]">
+                Copyright © 2025 All Rights Reserved.
+            </p>
+        </div>
+
+    </div>
+</footer>
     
     <!-- Main JavaScript -->
       <!-- JavaScript Files -->
