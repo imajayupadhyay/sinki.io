@@ -290,25 +290,36 @@
             .platforms-section {
                 padding: 40px 0;
             }
-            
+
             .platforms-section .container-custom {
                 padding-left: 16px;
                 padding-right: 16px;
             }
-            
+
             .platforms-section h2 {
                 font-size: 32px !important;
                 line-height: 40px !important;
             }
-            
+
             .platforms-section p {
                 font-size: 18px !important;
                 line-height: 27px !important;
             }
 
+            /* Keep Databricks logo full width */
+            .platforms-grid .flex {
+                justify-content: center;
+            }
+
+            .platforms-grid .flex .platform-logo-card {
+                width: 100%;
+                max-width: 350px;
+            }
+
             .platforms-grid .grid-cols-3,
             .platforms-grid .grid-cols-2 {
                 grid-template-columns: 1fr;
+                gap: 1rem;
             }
 
             .platform-logo-card {
@@ -326,6 +337,55 @@
             .animate-pulse-slow-delayed {
                 width: 80px;
                 height: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .platforms-section {
+                padding: 30px 0;
+            }
+
+            .platforms-section .container-custom {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .platforms-section h2 {
+                font-size: 28px !important;
+                line-height: 36px !important;
+                margin-bottom: 1rem !important;
+            }
+
+            .platforms-section p {
+                font-size: 16px !important;
+                line-height: 24px !important;
+                margin-bottom: 2rem !important;
+            }
+
+            /* Databricks logo even more prominent on small mobile */
+            .platforms-grid .flex .platform-logo-card {
+                width: 100%;
+                max-width: 280px;
+                padding: 1.5rem;
+            }
+
+            .platforms-grid .grid {
+                gap: 0.75rem;
+            }
+
+            .platform-logo-card {
+                min-height: 90px;
+                padding: 1rem;
+            }
+
+            .platform-logo-card img {
+                max-height: 45px;
+            }
+
+            /* Hide decorative elements on small mobile */
+            .animate-pulse-slow,
+            .animate-pulse-slow-delayed {
+                display: none;
             }
         }
 

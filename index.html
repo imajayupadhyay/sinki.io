@@ -84,19 +84,79 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu lg:hidden fixed top-0 right-0 h-full w-full sm:w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50">
         <div class="p-6 h-full flex flex-col">
-            <button class="mobile-menu-close mb-8 ml-auto block">
+            <!-- Close Button -->
+            <button class="mobile-menu-close mb-8 ml-auto block p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
                 <svg class="w-8 h-8 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                 </svg>
             </button>
-            <div class="flex flex-col space-y-6">
-                <a href="#services" class="text-brand-dark text-lg font-bold uppercase hover:text-brand-red transition-colors mobile-menu-link">Services</a>
-                <a href="#company" class="text-brand-dark text-lg font-bold uppercase hover:text-brand-red transition-colors mobile-menu-link">Company</a>
-                <a href="#insights" class="text-brand-dark text-lg font-bold uppercase hover:text-brand-red transition-colors mobile-menu-link">Insights</a>
-                <a href="#contact" class="text-brand-dark text-lg font-bold uppercase hover:text-brand-red transition-colors mobile-menu-link">Contact Us</a>
-                <a href="#get-started" class="inline-flex items-center justify-center px-10 py-3.5 border-2 border-brand-dark rounded-full text-brand-dark text-lg font-bold uppercase mt-6 hover:bg-brand-dark hover:text-white transition-all">
-                    Get Started
+
+            <!-- Menu Items -->
+            <div class="flex flex-col space-y-4">
+                <!-- Services -->
+                <a href="#services" class="mobile-menu-link group flex items-center px-4 py-4 border border-gray-200 rounded-xl hover:border-brand-red hover:bg-brand-red/5 transition-all duration-300">
+                    <div class="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-brand-red group-hover:scale-110 transition-all duration-300">
+                        <svg class="w-6 h-6 text-brand-red group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-brand-dark text-lg font-bold uppercase group-hover:text-brand-red transition-colors duration-300">Services</span>
+                        <p class="text-gray-500 text-sm font-normal">Our Solutions</p>
+                    </div>
                 </a>
+
+                <!-- Company -->
+                <a href="#company" class="mobile-menu-link group flex items-center px-4 py-4 border border-gray-200 rounded-xl hover:border-brand-red hover:bg-brand-red/5 transition-all duration-300">
+                    <div class="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-brand-red group-hover:scale-110 transition-all duration-300">
+                        <svg class="w-6 h-6 text-brand-red group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-brand-dark text-lg font-bold uppercase group-hover:text-brand-red transition-colors duration-300">Company</span>
+                        <p class="text-gray-500 text-sm font-normal">About Us</p>
+                    </div>
+                </a>
+
+                <!-- Insights -->
+                <a href="#insights" class="mobile-menu-link group flex items-center px-4 py-4 border border-gray-200 rounded-xl hover:border-brand-red hover:bg-brand-red/5 transition-all duration-300">
+                    <div class="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-brand-red group-hover:scale-110 transition-all duration-300">
+                        <svg class="w-6 h-6 text-brand-red group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-brand-dark text-lg font-bold uppercase group-hover:text-brand-red transition-colors duration-300">Insights</span>
+                        <p class="text-gray-500 text-sm font-normal">Resources & Blog</p>
+                    </div>
+                </a>
+
+                <!-- Contact Us -->
+                <a href="#contact" class="mobile-menu-link group flex items-center px-4 py-4 border border-gray-200 rounded-xl hover:border-brand-red hover:bg-brand-red/5 transition-all duration-300">
+                    <div class="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-brand-red group-hover:scale-110 transition-all duration-300">
+                        <svg class="w-6 h-6 text-brand-red group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-brand-dark text-lg font-bold uppercase group-hover:text-brand-red transition-colors duration-300">Contact Us</span>
+                        <p class="text-gray-500 text-sm font-normal">Get In Touch</p>
+                    </div>
+                </a>
+
+                <!-- Get Started Button -->
+                <div class="pt-6 mt-6 border-t border-gray-200">
+                    <a href="#get-started" class="group inline-flex items-center justify-center w-full px-6 py-4 bg-brand-red border-2 border-brand-red rounded-xl text-white text-lg font-bold uppercase hover:bg-transparent hover:text-brand-red transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <svg class="w-6 h-6 mr-3 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        Get Started
+                        <svg class="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -104,24 +164,21 @@
     
     <!-- Hero Section -->
     <div id="hero">
-        <section class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
-    <!-- Background Image -->
-    <div class="hero-background absolute inset-0 z-0">
-        <img src="./assets/images/heroobannersinki.png" alt="Hero Background" class="w-full h-[870px] object-cover">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80"></div>
-    </div>
+        <section class="hero-section relative min-h-[80vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-32" style="background-image: url('./assets/images/heroobannersinki.png'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: scroll;">
+    <!-- Background Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80 z-0"></div>
 
     <!-- Content Container -->
-    <div class="container-custom relative z-10 px-6 py-20">
+    <div class="container-custom relative z-10 px-3 sm:px-6 py-6 sm:py-20">
         <div class="max-w-[1518px] mx-auto text-center">
             <!-- Main Heading -->
-            <h1 class="hero-title text-brand-dark font-semibold leading-[100px] mb-8">
+            <h1 class="hero-title text-brand-dark font-semibold leading-tight sm:leading-relaxed lg:leading-[100px] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[100px] mb-4 sm:mb-8">
                 We Help You Unlock The Value Of Your Data
             </h1>
 
             <!-- Subtitle -->
-            <p class="hero-subtitle text-brand-light text-[26px] leading-[39px] max-w-[1200px] mx-auto mb-12">
-                We turn raw data into intelligence with Databricks. From data foundations to AI adoption, we deliver secure, scalable, and future-ready systems.
+            <p class="hero-subtitle text-brand-light text-lg sm:text-xl md:text-2xl lg:text-[26px] leading-snug sm:leading-relaxed lg:leading-[39px] max-w-[95%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[1200px] mx-auto mb-8 sm:mb-12">
+                We turn raw data into intelligence with Databricks. From data foundations to AI adoption, we deliver secure, scalable systems.
             </p>
 
             <!-- CTA Buttons -->
@@ -165,19 +222,19 @@
 
 <!-- Partner Badge Section - ADD THIS -->
 <section class="partner-badge-section bg-brand-dark border-b border-white/15">
-    <div class="container mx-auto px-6">
-        <div class="flex items-center justify-center gap-4 h-[50px]">
-            <span class="text-white text-xl font-medium tracking-wide">
+    <div class="container mx-auto px-3 sm:px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 h-auto sm:h-[50px] py-3 sm:py-0">
+            <span class="text-white text-base sm:text-xl font-medium tracking-wide text-center">
                 An Official Databricks Partner
             </span>
             <!-- Databricks Logo with SVG fallback -->
-            <div class="databricks-logo-wrapper">
+            <div class="databricks-logo-wrapper w-full sm:w-auto flex justify-center">
                 <img src="./assets/images/databrickslight.png"
                      alt="Databricks Logo"
-                     class="h-6 partner-logo"
+                     class="h-5 sm:h-6 partner-logo w-auto max-w-full"
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
                 <!-- Inline SVG Fallback -->
-                <svg class="h-6 partner-logo" style="display: none;" viewBox="0 0 144 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="h-5 sm:h-6 partner-logo w-auto max-w-full" style="display: none;" viewBox="0 0 144 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 12C0 5.37258 5.37258 0 12 0H132C138.627 0 144 5.37258 144 12C144 18.6274 138.627 24 132 24H12C5.37258 24 0 18.6274 0 12Z" fill="#FF3621"/>
                     <path d="M20.5 6.5L12 11L3.5 6.5L12 2L20.5 6.5Z" fill="white"/>
                     <path d="M20.5 12L12 16.5L3.5 12V6.5L12 11L20.5 6.5V12Z" fill="white"/>
@@ -204,7 +261,7 @@
         </div>
 
         <!-- Main Heading -->
-        <h2 class="text-brand-dark font-semibold text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 max-w-[1167px] ml-3 animate-slide-up">
+        <h2 class="text-brand-dark font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 max-w-[1167px] ml-3 animate-slide-up">
             We Simplify Your Databricks Journey End-to-End
         </h2>
 
@@ -338,7 +395,7 @@
         </div>
 
         <!-- Main Heading -->
-        <h2 class="text-white font-semibold text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 text-center max-w-[1275px] mx-auto animate-slide-up">
+        <h2 class="text-white font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 text-center max-w-[1275px] mx-auto animate-slide-up">
             Real Results You'll Achieve With Us
         </h2>
 
@@ -502,7 +559,7 @@
                 </div>
 
                 <!-- Main Heading -->
-                <h2 class="text-brand-dark font-semibold text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 max-w-[925px] animate-slide-up">
+                <h2 class="text-brand-dark font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 max-w-[925px] animate-slide-up">
                     How We Make Databricks Work For You
                 </h2>
 
@@ -514,15 +571,22 @@
 
             <!-- Right Content - Flow Diagram -->
             <div class="approach-diagram relative animate-slide-in-right">
-                <!-- Placeholder for Flow Diagram Image -->
-                <div class="diagram-container relative w-full h-[600px] lg:h-[700px] flex items-center justify-center">
-                    <!-- You can replace this with your actual image -->
-                    <img src="./assets/images/Infographic.png" 
-                         alt="Our 3-Step Approach" 
-                         class="w-full h-full object-contain"
+                <!-- Responsive Flow Diagram Images -->
+                <div class="diagram-container relative w-full h-[400px] sm:h-[500px] lg:h-[700px] flex items-center justify-center">
+
+                    <!-- Mobile Image (hidden on sm and above) -->
+                    <img src="./assets/images/Infographic.png"
+                         alt="Our 3-Step Approach - Mobile"
+                         class="block sm:hidden w-full h-full object-contain"
+                         onerror="this.style.display='none';">
+
+                    <!-- Desktop Image (hidden on mobile, shown on sm and above) -->
+                    <img src="./assets/images/Infographic.png"
+                         alt="Our 3-Step Approach - Desktop"
+                         class="hidden sm:block w-full h-full object-contain"
                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    
-                    <!-- Fallback placeholder if image is not found -->
+
+                    <!-- Fallback placeholder if images are not found -->
                     <div class="fallback-placeholder absolute inset-0 hidden items-center justify-center bg-gray-100 rounded-2xl border-2 border-dashed border-gray-300">
                         <div class="text-center p-8">
                             <svg class="w-24 h-24 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -532,7 +596,9 @@
                                 Approach Flow Diagram
                             </p>
                             <p class="text-gray-400 text-sm mt-2">
-                                Place your image at: assets/images/approach-flow.png
+                                Place your images at:<br>
+                                Mobile: assets/images/Infographic-mobile.png<br>
+                                Desktop: assets/images/Infographic.png
                             </p>
                         </div>
                     </div>
@@ -561,7 +627,7 @@
         </div>
 
         <!-- Main Heading -->
-        <h2 class="text-brand-dark font-semibold text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 text-center max-w-[1281px] mx-auto animate-slide-up">
+        <h2 class="text-brand-dark font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 text-center max-w-[1281px] mx-auto animate-slide-up">
             Databricks Services We Deliver
         </h2>
 
@@ -720,7 +786,7 @@
                 </div>
 
                 <!-- Main Heading -->
-                <h2 class="text-brand-dark font-semibold text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 max-w-[852px] animate-slide-up">
+                <h2 class="text-brand-dark font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 max-w-[852px] animate-slide-up">
                     Built on the Platforms You Trust
                 </h2>
 
@@ -737,10 +803,10 @@
                     
                     <!-- Row 1 - Single Card (Databricks) -->
                     <div class="flex justify-center">
-                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[143px] w-[286px]">
-                            <img src="./assets/images/databricks.png" 
-                                 alt="Databricks" 
-                                 class="max-w-full h-auto object-contain"
+                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-4 sm:p-6 lg:p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[100px] sm:min-h-[120px] lg:min-h-[143px] w-full max-w-[250px] sm:max-w-[286px]">
+                            <img src="./assets/images/databricks.png"
+                                 alt="Databricks"
+                                 class="max-w-full h-auto object-contain max-h-[60px] sm:max-h-[70px] lg:max-h-[80px]"
                                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div class="logo-placeholder hidden">
                                 <span class="text-brand-dark font-semibold text-lg">Databricks</span>
@@ -749,31 +815,31 @@
                     </div>
 
                     <!-- Row 2 - Three Cards (Azure, Google Cloud, AWS) -->
-                    <div class="grid grid-cols-3 gap-6">
-                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[143px]">
-                            <img src="./assets/images/azure-logo.png" 
-                                 alt="Microsoft Azure" 
-                                 class="max-w-full h-auto object-contain"
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
+                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-4 sm:p-6 lg:p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[100px] sm:min-h-[120px] lg:min-h-[143px] mx-auto w-full max-w-[200px] sm:max-w-none">
+                            <img src="./assets/images/azure-logo.png"
+                                 alt="Microsoft Azure"
+                                 class="max-w-full h-auto object-contain max-h-[50px] sm:max-h-[60px] lg:max-h-[70px]"
                                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div class="logo-placeholder hidden">
                                 <span class="text-brand-dark font-semibold text-lg">Azure</span>
                             </div>
                         </div>
 
-                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[143px]">
-                            <img src="./assets/images/Google-Cloud.png" 
-                                 alt="Google Cloud" 
-                                 class="max-w-full h-auto object-contain"
+                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-4 sm:p-6 lg:p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[100px] sm:min-h-[120px] lg:min-h-[143px] mx-auto w-full max-w-[200px] sm:max-w-none">
+                            <img src="./assets/images/Google-Cloud.png"
+                                 alt="Google Cloud"
+                                 class="max-w-full h-auto object-contain max-h-[50px] sm:max-h-[60px] lg:max-h-[70px]"
                                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div class="logo-placeholder hidden">
                                 <span class="text-brand-dark font-semibold text-lg">Google Cloud</span>
                             </div>
                         </div>
 
-                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[143px]">
-                            <img src="./assets/images/aws-logo.png" 
-                                 alt="AWS" 
-                                 class="max-w-full h-auto object-contain"
+                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-4 sm:p-6 lg:p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[100px] sm:min-h-[120px] lg:min-h-[143px] mx-auto w-full max-w-[200px] sm:max-w-none">
+                            <img src="./assets/images/aws-logo.png"
+                                 alt="AWS"
+                                 class="max-w-full h-auto object-contain max-h-[50px] sm:max-h-[60px] lg:max-h-[70px]"
                                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div class="logo-placeholder hidden">
                                 <span class="text-brand-dark font-semibold text-lg">AWS</span>
@@ -782,21 +848,21 @@
                     </div>
 
                     <!-- Row 3 - Two Cards (Power BI, Tableau) -->
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[143px]">
-                            <img src="./assets/images/Power-Bi-Logo.png" 
-                                 alt="Power BI" 
-                                 class="max-w-full h-auto object-contain"
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-2xl mx-auto">
+                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-4 sm:p-6 lg:p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[100px] sm:min-h-[120px] lg:min-h-[143px] mx-auto w-full max-w-[200px] sm:max-w-none">
+                            <img src="./assets/images/Power-Bi-Logo.png"
+                                 alt="Power BI"
+                                 class="max-w-full h-auto object-contain max-h-[50px] sm:max-h-[60px] lg:max-h-[70px]"
                                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div class="logo-placeholder hidden">
                                 <span class="text-brand-dark font-semibold text-lg">Power BI</span>
                             </div>
                         </div>
 
-                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[143px]">
-                            <img src="./assets/images/Tableau.png" 
-                                 alt="Tableau" 
-                                 class="max-w-full h-auto object-contain"
+                        <div class="platform-logo-card group bg-white border border-brand-gray rounded-[25px] p-4 sm:p-6 lg:p-8 hover:shadow-xl transition-all duration-500 cursor-pointer flex items-center justify-center min-h-[100px] sm:min-h-[120px] lg:min-h-[143px] mx-auto w-full max-w-[200px] sm:max-w-none">
+                            <img src="./assets/images/Tableau.png"
+                                 alt="Tableau"
+                                 class="max-w-full h-auto object-contain max-h-[50px] sm:max-h-[60px] lg:max-h-[70px]"
                                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div class="logo-placeholder hidden">
                                 <span class="text-brand-dark font-semibold text-lg">Tableau</span>
@@ -833,7 +899,7 @@
         </div>
 
         <!-- Main Heading -->
-        <h2 class="text-brand-dark font-semibold text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 text-center max-w-[1210px] mx-auto animate-slide-up">
+        <h2 class="text-brand-dark font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 text-center max-w-[1210px] mx-auto animate-slide-up">
             Your Databricks Partner, Every Step of the Way
         </h2>
 
@@ -951,7 +1017,7 @@
                 </div>
 
                 <!-- Main Heading -->
-                <h2 class="text-brand-dark font-semibold text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 max-w-[834px] animate-slide-up">
+                <h2 class="text-brand-dark font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 max-w-[834px] animate-slide-up">
                     Latest Insights on Databricks, Data & AI
                 </h2>
 
@@ -1081,7 +1147,7 @@
                     </div>
 
                     <!-- Main Heading -->
-                    <h2 class="text-brand-dark font-semibold text-4xl lg:text-[64px] leading-tight lg:leading-[70.4px] mb-6 animate-slide-up">
+                    <h2 class="text-brand-dark font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[78px] leading-tight lg:leading-[85.8px] mb-6 animate-slide-up">
                         Ready to Get More from Databricks?
                     </h2>
 

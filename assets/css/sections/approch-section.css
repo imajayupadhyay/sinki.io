@@ -221,17 +221,17 @@
             .approach-section {
                 padding: 40px 0;
             }
-            
+
             .approach-section .container-custom {
                 padding-left: 16px;
                 padding-right: 16px;
             }
-            
+
             .approach-section h2 {
                 font-size: 32px !important;
                 line-height: 40px !important;
             }
-            
+
             .approach-section p {
                 font-size: 18px !important;
                 line-height: 27px !important;
@@ -241,11 +241,52 @@
                 height: 400px;
             }
 
+            .approach-section .grid {
+                gap: 1.5rem;
+            }
+
             /* Decorative elements smaller on mobile */
             .animate-pulse-slow,
             .animate-pulse-slow-delayed {
                 width: 80px;
                 height: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .approach-section {
+                padding: 30px 0;
+            }
+
+            .approach-section .container-custom {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .approach-section h2 {
+                font-size: 28px !important;
+                line-height: 36px !important;
+                margin-bottom: 1rem !important;
+            }
+
+            .approach-section p {
+                font-size: 16px !important;
+                line-height: 24px !important;
+                margin-bottom: 2rem !important;
+            }
+
+            .diagram-container {
+                height: 350px;
+            }
+
+            .approach-section .grid {
+                gap: 1rem;
+            }
+
+            /* Hide decorative elements on small mobile */
+            .animate-pulse-slow,
+            .animate-pulse-slow-delayed {
+                display: none;
             }
         }
 
