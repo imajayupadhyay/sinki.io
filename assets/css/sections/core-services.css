@@ -276,4 +276,23 @@
                 padding: 3px 12px;
             }
         }
- 
+ /* Arrow Icon Styles */
+.core-services-section .arrow-icon {
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(0, 0);
+}
+
+.core-services-section .service-card:hover .arrow-icon {
+    opacity: 1;
+    transform: translate(4px, -4px);
+}
+
+/* Arrow Animation on Hover */
+.core-services-section .arrow-icon svg {
+    transition: transform 0.3s ease;
+}
+
+.core-services-section .service-card:hover .arrow-icon svg {
+    transform: scale(1.1);
+}
