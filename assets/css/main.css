@@ -1,6 +1,6 @@
 /* Main Stylesheet */
-@import url('./navigation.css');
-@import url('./hero.css');
+@import url('./sections/navigation.css');
+@import url('./sections/hero.css');
 @import url('./sections/services.css');
 @import url('./sections/approach.css');
 @import url('./sections/platforms.css');
