@@ -4,10 +4,21 @@
             <span class="text-white text-xl font-medium tracking-wide">
                 An Official Databricks Partner
             </span>
-            <img src="./assets/images/databricks-logo.svg" 
-                 alt="Databricks Logo" 
-                 class="h-6 partner-logo"
-                 onerror="this.style.display='none'">
+            <!-- Databricks Logo with SVG fallback -->
+            <div class="databricks-logo-wrapper">
+                <img src="./assets/images/databricks-logo.svg"
+                     alt="Databricks Logo"
+                     class="h-6 partner-logo"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                <!-- Inline SVG Fallback -->
+                <svg class="h-6 partner-logo" style="display: none;" viewBox="0 0 144 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 12C0 5.37258 5.37258 0 12 0H132C138.627 0 144 5.37258 144 12C144 18.6274 138.627 24 132 24H12C5.37258 24 0 18.6274 0 12Z" fill="#FF3621"/>
+                    <path d="M20.5 6.5L12 11L3.5 6.5L12 2L20.5 6.5Z" fill="white"/>
+                    <path d="M20.5 12L12 16.5L3.5 12V6.5L12 11L20.5 6.5V12Z" fill="white"/>
+                    <path d="M20.5 17.5L12 22L3.5 17.5V12L12 16.5L20.5 12V17.5Z" fill="white"/>
+                    <text x="28" y="16" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="white">databricks</text>
+                </svg>
+            </div>
         </div>
     </div>
 </section>

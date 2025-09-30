@@ -170,10 +170,21 @@
             <span class="text-white text-xl font-medium tracking-wide">
                 An Official Databricks Partner
             </span>
-            <img src="./assets/images/databricks-logo.svg" 
-                 alt="Databricks Logo" 
-                 class="h-6 partner-logo"
-                 onerror="this.style.display='none'">
+            <!-- Databricks Logo with SVG fallback -->
+            <div class="databricks-logo-wrapper">
+                <img src="./assets/images/databricks-logo.svg"
+                     alt="Databricks Logo"
+                     class="h-6 partner-logo"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                <!-- Inline SVG Fallback -->
+                <svg class="h-6 partner-logo" style="display: none;" viewBox="0 0 144 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 12C0 5.37258 5.37258 0 12 0H132C138.627 0 144 5.37258 144 12C144 18.6274 138.627 24 132 24H12C5.37258 24 0 18.6274 0 12Z" fill="#FF3621"/>
+                    <path d="M20.5 6.5L12 11L3.5 6.5L12 2L20.5 6.5Z" fill="white"/>
+                    <path d="M20.5 12L12 16.5L3.5 12V6.5L12 11L20.5 6.5V12Z" fill="white"/>
+                    <path d="M20.5 17.5L12 22L3.5 17.5V12L12 16.5L20.5 12V17.5Z" fill="white"/>
+                    <text x="28" y="16" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="white">databricks</text>
+                </svg>
+            </div>
         </div>
     </div>
 </section>
@@ -1102,24 +1113,33 @@
     <div class="container-custom max-w-[1920px] mx-auto px-12 lg:px-24">
         
         <!-- Main Footer Content -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 pb-12 border-b border-white/10">
+        <div class="footer-grid pb-12 border-b border-white/10">
             
             <!-- Column 1: Logo and Description -->
-            <div class="footer-col">
+            <div class="footer-col footer-col-wide">
                 <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="#" class="flex items-center space-x-2 mb-2 logo-container">
-                        <img class="sinkilogoclass" src="./assets/images/sinkidarkmode.png" alt="Sinki Logo">
-                    </a>
+                <div class="mb-6">
+                    <img src="./assets/images/sinkidarkmode.png" 
+                         alt="Sinki Logo" 
+                         class="h-20 w-auto"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="logo-placeholder hidden items-center gap-2">
+                        <div class="w-12 h-12 bg-brand-red rounded-lg flex items-center justify-center">
+                            <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 5L30 15L20 25L30 35L10 25L20 15L10 5Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <span class="text-white text-2xl font-bold">Sinki</span>
+                    </div>
                 </div>
                 
                 <!-- Description -->
-                <p class="text-white text-xl leading-[28px] tracking-[0.4px] mb-8 max-w-[315px]">
+                <p class="text-white text-xl leading-[28px] tracking-[0.4px] mb-8">
                     Data & AI That Drives Real Business Impact
                 </p>
 
                 <!-- Footer Links -->
-                <div class="flex items-center gap-6 text-white text-xl font-medium">
+                <div class="footer-bottom-links">
                     <a href="#help" class="hover:text-brand-red transition-colors duration-300">Help</a>
                     <span class="text-white/30">|</span>
                     <a href="#privacy" class="hover:text-brand-red transition-colors duration-300">Privacy Policy</a>
@@ -1187,7 +1207,7 @@
             </div>
 
             <!-- Column 4: Contact -->
-            <div class="footer-col">
+            <div class="footer-col footer-col-contact">
                 <h3 class="text-white text-2xl font-bold tracking-[0.48px] mb-8">
                     Contact
                 </h3>
@@ -1214,7 +1234,7 @@
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                         </svg>
                     </div>
-                    <div class="text-white text-xl font-medium leading-[28px] max-w-[340px]">
+                    <div class="text-white text-xl font-medium leading-[28px]">
                         <p>D-5, Third Floor, Logix Infotech Park, Sec- 59, Noida – 201301</p>
                     </div>
                 </div>

@@ -4,12 +4,12 @@
     width: 100%;
     background: #121212;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    margin-top: -52px; /* Attach to hero section */
+    margin-top: -52px;
     animation: fadeInDown 0.8s ease-out;
     animation-delay: 1.6s;
     opacity: 0;
     animation-fill-mode: forwards;
-    z-index: 10; /* Ensure it stays above hero background */
+    z-index: 10;
 }
 
 @keyframes fadeInDown {
@@ -27,21 +27,40 @@
     max-width: 1920px;
 }
 
+/* Databricks Logo Wrapper */
+.databricks-logo-wrapper {
+    display: inline-flex;
+    align-items: center;
+}
+
 /* Partner Logo Animation */
 .partner-logo {
     transition: all 0.3s ease;
-    filter: brightness(0) invert(1);
+    height: 24px;
+    width: auto;
 }
 
 .partner-logo:hover {
-    transform: scale(1.1);
-    filter: brightness(1) invert(0);
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(255, 54, 33, 0.5));
+}
+
+/* SVG specific styles */
+.partner-logo path {
+    transition: fill 0.3s ease;
+}
+
+.partner-logo:hover path[fill="#FF3621"] {
+    fill: #ff4532;
 }
 
 /* Text Animation */
 .partner-badge-section span {
     position: relative;
     display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
 }
 
 .partner-badge-section span::after {
@@ -84,7 +103,7 @@
 @media (max-width: 768px) {
     .partner-badge-section {
         height: auto;
-        margin-top: -40px; /* Adjust for mobile */
+        margin-top: -40px;
     }
     
     .partner-badge-section .flex {
@@ -104,11 +123,15 @@
 
 @media (max-width: 640px) {
     .partner-badge-section {
-        margin-top: -30px; /* Adjust for smaller screens */
+        margin-top: -30px;
     }
     
     .partner-badge-section span {
         font-size: 14px;
         text-align: center;
+    }
+    
+    .partner-logo {
+        height: 18px;
     }
 }
