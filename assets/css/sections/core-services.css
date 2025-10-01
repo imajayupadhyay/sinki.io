@@ -1,282 +1,149 @@
+/* Core Services Section Styles */
+.core-services-section {
+    position: relative;
+    min-height: 100vh;
+    font-family: 'Instrument Sans', sans-serif;
+    background: transparent !important;
+}
 
-        /* Core Services Section Styles */
-        .core-services-section {
-            position: relative;
-            min-height: 100vh;
-            background: #f5f5dc;
-            font-family: 'Instrument Sans', sans-serif;
-        }
+.text-brand-dark {
+    color: #121212;
+}
 
-        .text-brand-dark {
-            color: #121212;
-        }
+.text-brand-red {
+    color: #FF3621;
+}
 
-        .text-brand-red {
-            color: #FF3621;
-        }
+.bg-brand-red {
+    background-color: #FF3621;
+}
 
-        .bg-brand-red {
-            background-color: #FF3621;
-        }
+.bg-brand-dark {
+    background-color: #121212;
+}
 
-        .bg-brand-dark {
-            background-color: #121212;
-        }
+/* Container Custom */
+.core-services-section .container-custom {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-left: 51px;
+    padding-right: 51px;
+}
 
-        /* Container Custom */
-        .core-services-section .container-custom {
-            width: 100%;
-            max-width: 1920px;
-            margin: 0 auto;
-            padding-left: 51px;
-            padding-right: 51px;
-        }
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
 
-        .animate-fade-in {
-            animation: fadeIn 0.8s ease-out;
-        }
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.animate-slide-up {
+    animation: slideUp 0.8s ease-out 0.2s;
+    animation-fill-mode: backwards;
+}
 
-        .animate-slide-up {
-            animation: slideUp 0.8s ease-out 0.2s;
-            animation-fill-mode: backwards;
-        }
+.animate-slide-up-delayed {
+    animation: slideUp 0.8s ease-out 0.4s;
+    animation-fill-mode: backwards;
+}
 
-        .animate-slide-up-delayed {
-            animation: slideUp 0.8s ease-out 0.4s;
-            animation-fill-mode: backwards;
-        }
+.animate-fade-in-up {
+    animation: slideUp 1s ease-out 0.8s;
+    animation-fill-mode: backwards;
+}
 
-        .animate-fade-in-up {
-            animation: slideUp 1s ease-out 0.8s;
-            animation-fill-mode: backwards;
-        }
+/* Core Service Card Styles */
+.core-services-section .service-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: slideUp 0.8s ease-out;
+    animation-fill-mode: backwards;
+    min-height: 500px;
+}
 
-        /* Core Service Card Styles */
-        .core-services-section .service-card {
-            position: relative;
-            background: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(10px);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            animation: slideUp 0.8s ease-out;
-            animation-fill-mode: backwards;
-            min-height: 500px;
-        }
+.core-services-section .service-card:nth-child(1) { animation-delay: 0.6s; }
+.core-services-section .service-card:nth-child(2) { animation-delay: 0.7s; }
+.core-services-section .service-card:nth-child(3) { animation-delay: 0.8s; }
+.core-services-section .service-card:nth-child(4) { animation-delay: 0.9s; }
 
-        .core-services-section .service-card:nth-child(1) { animation-delay: 0.6s; }
-        .core-services-section .service-card:nth-child(2) { animation-delay: 0.7s; }
-        .core-services-section .service-card:nth-child(3) { animation-delay: 0.8s; }
-        .core-services-section .service-card:nth-child(4) { animation-delay: 0.9s; }
+/* Core Service Card Hover Effects */
+.core-services-section .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 25px;
+    background: linear-gradient(135deg, rgba(255, 54, 33, 0.05) 0%, rgba(255, 107, 90, 0.02) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
 
-        /* Core Service Card Hover Effects */
-        .core-services-section .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 25px;
-            background: linear-gradient(135deg, rgba(255, 54, 33, 0.05) 0%, rgba(255, 107, 90, 0.02) 100%);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            z-index: -1;
-        }
+.core-services-section .service-card:hover::before {
+    opacity: 1;
+}
 
-        .core-services-section .service-card:hover::before {
-            opacity: 1;
-        }
+/* Core Service Icon Wrapper */
+.core-services-section .icon-wrapper {
+    position: relative;
+    background: #FF3621;
+    box-shadow: 0 10px 30px rgba(255, 54, 33, 0.3);
+}
 
-        /* Core Service Icon Wrapper */
-        .core-services-section .icon-wrapper {
-            position: relative;
-            background: #FF3621;
-            box-shadow: 0 10px 30px rgba(255, 54, 33, 0.3);
-        }
+.core-services-section .icon-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid #FF3621;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
 
-        .core-services-section .icon-wrapper::after {
-            content: '';
-            position: absolute;
-            inset: -4px;
-            border-radius: 50%;
-            border: 2px solid #FF3621;
-            opacity: 0;
-            transition: all 0.5s ease;
-        }
+.core-services-section .service-card:hover .icon-wrapper::after {
+    opacity: 0.3;
+    inset: -8px;
+}
 
-        .core-services-section .service-card:hover .icon-wrapper::after {
-            opacity: 0.3;
-            inset: -8px;
-        }
+/* Core Service Tags */
+.core-services-section .tag {
+    display: inline-block;
+    padding: 5px 18px;
+    background: transparent;
+    border: 1px solid rgba(18, 18, 18, 0.3);
+    border-radius: 40px;
+    color: #121212;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.4px;
+    transition: all 0.3s ease;
+}
 
-        /* Core Service Tags */
-        .core-services-section .tag {
-            display: inline-block;
-            padding: 5px 18px;
-            background: transparent;
-            border: 1px solid rgba(18, 18, 18, 0.3);
-            border-radius: 40px;
-            color: #121212;
-            font-size: 20px;
-            line-height: 30px;
-            letter-spacing: 0.4px;
-            transition: all 0.3s ease;
-        }
+.core-services-section .service-card:hover .tag {
+    background: rgba(255, 54, 33, 0.1);
+    border-color: #FF3621;
+}
 
-        .core-services-section .service-card:hover .tag {
-            background: rgba(255, 54, 33, 0.1);
-            border-color: #FF3621;
-        }
-
-        /* Button Hover Effect */
-        .btn-hover-effect {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-hover-effect:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(18, 18, 18, 0.2);
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 1536px) {
-            .core-services-section .container-custom {
-                padding-left: 40px;
-                padding-right: 40px;
-            }
-        }
-
-        @media (max-width: 1280px) {
-            .core-services-section .container-custom {
-                padding-left: 32px;
-                padding-right: 32px;
-            }
-            
-            .core-services-section h2 {
-                font-size: 64px !important;
-                line-height: 70px !important;
-            }
-            
-            .core-services-section p {
-                font-size: 26px !important;
-                line-height: 39px !important;
-            }
-
-            .service-card h3 {
-                font-size: 26px !important;
-                line-height: 34px !important;
-            }
-        }
-
-        @media (max-width: 1024px) {
-            .core-services-section {
-                padding: 60px 0;
-            }
-            
-            .core-services-section .container-custom {
-                padding-left: 24px;
-                padding-right: 24px;
-            }
-            
-            .core-services-section h2 {
-                font-size: 52px !important;
-                line-height: 58px !important;
-            }
-            
-            .core-services-section p {
-                font-size: 22px !important;
-                line-height: 33px !important;
-            }
-
-            .core-services-section .service-card {
-                min-height: auto;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .core-services-section .container-custom {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-            
-            .core-services-section h2 {
-                font-size: 40px !important;
-                line-height: 48px !important;
-            }
-            
-            .core-services-section p {
-                font-size: 20px !important;
-                line-height: 30px !important;
-            }
-            
-            .core-services-section .icon-wrapper {
-                width: 70px !important;
-                height: 70px !important;
-            }
-            
-            .core-services-section .icon-wrapper svg {
-                width: 36px !important;
-                height: 36px !important;
-            }
-            
-            .core-services-section .service-card h3 {
-                font-size: 24px !important;
-                line-height: 32px !important;
-            }
-
-            .core-services-section .tag {
-                font-size: 16px;
-                padding: 4px 14px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .core-services-section {
-                padding: 40px 0;
-            }
-            
-            .core-services-section .container-custom {
-                padding-left: 16px;
-                padding-right: 16px;
-            }
-            
-            .core-services-section h2 {
-                font-size: 32px !important;
-                line-height: 40px !important;
-            }
-            
-            .core-services-section p {
-                font-size: 18px !important;
-                line-height: 27px !important;
-            }
-            
-            .core-services-section .service-card {
-                padding: 1.5rem;
-            }
-
-            .core-services-section .tag {
-                font-size: 14px;
-                padding: 3px 12px;
-            }
-        }
- /* Arrow Icon Styles */
+/* Arrow Icon Styles */
 .core-services-section .arrow-icon {
     opacity: 0;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -295,4 +162,137 @@
 
 .core-services-section .service-card:hover .arrow-icon svg {
     transform: scale(1.1);
+}
+
+/* Button Hover Effect */
+.btn-hover-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-hover-effect:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(18, 18, 18, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 1536px) {
+    .core-services-section .container-custom {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .core-services-section .container-custom {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    
+    .core-services-section h2 {
+        font-size: 64px !important;
+        line-height: 70px !important;
+    }
+    
+    .core-services-section p {
+        font-size: 26px !important;
+        line-height: 39px !important;
+    }
+
+    .service-card h3 {
+        font-size: 26px !important;
+        line-height: 34px !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .core-services-section {
+        padding: 60px 0;
+    }
+    
+    .core-services-section .container-custom {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    
+    .core-services-section h2 {
+        font-size: 52px !important;
+        line-height: 58px !important;
+    }
+    
+    .core-services-section p {
+        font-size: 22px !important;
+        line-height: 33px !important;
+    }
+
+    .core-services-section .service-card {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .core-services-section .container-custom {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .core-services-section h2 {
+        font-size: 40px !important;
+        line-height: 48px !important;
+    }
+    
+    .core-services-section p {
+        font-size: 20px !important;
+        line-height: 30px !important;
+    }
+    
+    .core-services-section .icon-wrapper {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    
+    .core-services-section .icon-wrapper svg {
+        width: 36px !important;
+        height: 36px !important;
+    }
+    
+    .core-services-section .service-card h3 {
+        font-size: 24px !important;
+        line-height: 32px !important;
+    }
+
+    .core-services-section .tag {
+        font-size: 16px;
+        padding: 4px 14px;
+    }
+}
+
+@media (max-width: 640px) {
+    .core-services-section {
+        padding: 40px 0;
+    }
+    
+    .core-services-section .container-custom {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .core-services-section h2 {
+        font-size: 32px !important;
+        line-height: 40px !important;
+    }
+    
+    .core-services-section p {
+        font-size: 18px !important;
+        line-height: 27px !important;
+    }
+    
+    .core-services-section .service-card {
+        padding: 1.5rem;
+    }
+
+    .core-services-section .tag {
+        font-size: 14px;
+        padding: 3px 12px;
+    }
 }

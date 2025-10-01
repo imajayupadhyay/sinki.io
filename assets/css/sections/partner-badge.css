@@ -125,13 +125,38 @@
     .partner-badge-section {
         margin-top: -30px;
     }
-    
+
+    .partner-badge-section .flex {
+        padding: 10px 0;
+        gap: 6px;
+    }
+
     .partner-badge-section span {
         font-size: 14px;
         text-align: center;
     }
-    
+
     .partner-logo {
         height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partner-badge-section {
+        margin-top: -25px;
+    }
+
+    .partner-badge-section .flex {
+        padding: 8px 0;
+        gap: 4px;
+    }
+
+    .partner-badge-section span {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .partner-logo {
+        height: 16px;
     }
 }

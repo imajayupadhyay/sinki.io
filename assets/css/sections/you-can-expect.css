@@ -59,18 +59,38 @@
             animation-fill-mode: backwards;
         }
 
-        /* Outcome Card Styles */
+        /* Enhanced Outcome Card Styles with Glass Effect */
         .outcome-card {
             position: relative;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 25px;
             padding: 2.5rem;
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             animation: slideUp 0.8s ease-out;
             animation-fill-mode: backwards;
             min-height: 320px;
+            box-shadow:
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        /* Glass effect enhancement */
+        .outcome-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 25px;
+            background: linear-gradient(135deg,
+                rgba(255, 255, 255, 0.15) 0%,
+                rgba(255, 255, 255, 0.05) 50%,
+                rgba(255, 54, 33, 0.05) 100%);
+            pointer-events: none;
+            z-index: 1;
         }
 
         .outcome-card:nth-child(1) {
@@ -97,30 +117,43 @@
             animation-delay: 1.1s;
         }
 
-        /* Card Hover Effects */
-        .outcome-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 25px;
-            background: linear-gradient(135deg, rgba(255, 54, 33, 0.1) 0%, rgba(255, 107, 90, 0.05) 100%);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            z-index: -1;
-        }
-
+        /* Enhanced Card Hover Effects */
         .outcome-card:hover::before {
-            opacity: 1;
+            background: linear-gradient(135deg,
+                rgba(255, 255, 255, 0.25) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 54, 33, 0.15) 100%);
         }
 
         .outcome-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(255, 54, 33, 0.3);
-            border-color: rgba(255, 54, 33, 0.5);
-            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.4),
+                0 15px 35px rgba(255, 54, 33, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 54, 33, 0.6);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        /* Additional glass shine effect on hover */
+        .outcome-card:hover::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                transparent,
+                rgba(255, 255, 255, 0.4),
+                transparent);
+            transition: left 0.6s ease-in-out;
+            border-radius: 25px;
+            z-index: 2;
+        }
+
+        .outcome-card:hover::after {
+            left: 100%;
         }
 
         /* Icon Wrapper Styles */
@@ -159,33 +192,15 @@
             }
         }
 
-        /* Ripple Effect */
+        /* Enhanced Glass Effect */
         .outcome-card {
             overflow: hidden;
-        }
-
-        .outcome-card::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 54, 33, 0.2);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .outcome-card:active::after {
-            width: 500px;
-            height: 500px;
         }
 
         /* Ensure content is above effects */
         .outcome-card > * {
             position: relative;
-            z-index: 1;
+            z-index: 3;
         }
 
         /* Responsive Styles */
